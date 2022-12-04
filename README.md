@@ -25,8 +25,8 @@ It is not straight-forward to compare Azure Table Storage vs Azure SQL data at r
 Trax is a Durable Function and therefor offers built in reliability, but if there ever is a problem when processing a batch, then:
 
 - the error will be logged
-- audit data will not be deleted from the source SQL Server
-- or copied to table storage
+- the problematic batch of audit data will not be deleted from the source SQL Server
+- the problematic batch of audit data will not be copied to table storage
 - Trax will continue to process new data
  
 This allows for safe problem resolution if the need ever arises.
