@@ -1,6 +1,6 @@
 This software, "Trax SQL Audit", is not free for commercial business use, to be deployed, or to be used to connect to any business database, without purchasing a license for "Trax SQL Audit" software from Andre Maree maree.andre@gmail.com. It is not allowed to copy the "Trax SQL Audit" dll, or the source code of "Trax SQL Audit", to use it as is, or to modify it, without purchasing a "Trax SQL Audit" license that allows this. Please see the included software license "TRAX_SQL_AUDIT_LICENSE.md"".
 
-1 License per SQL database is needed at $99 per month. Contact Andre at maree.andre@gmail.com for more info.
+A license per SQL database must be purchased at $99 per month, or for $999 for a year. Contact Andre at maree.andre@gmail.com for more info.
 
 The Trax source code repository is not publicly available.
 
