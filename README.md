@@ -18,7 +18,7 @@ The goal of Trax is to help your business save money and benefit from modern app
 
 ### High Level Cost Benefit Analysis:
 
-It is not straight-forward to compare Azure Table Storage vs SQL Azure data at rest costs. A reasonable cost for SQL Azure can be $5 per gig per month. A reasonable cost for Azure Table Storage can be 5c per gig per month. It is not unreasonable to estimate that Azure Table Storage cost is about a 100 times cheaper than SQL Azure for data at rest. It is very safe to assume that there is a massive price advantage for data at rest for Azure Table Storage, for any logical comparisons with different factors and features enabled that effects pricing.
+It is not straight-forward to compare Azure Table Storage to SQL Azure data at rest costs. A reasonable cost for SQL Azure can be $5 per gig per month. A reasonable cost for Azure Table Storage can be 5c per gig per month. It is not unreasonable to estimate that Azure Table Storage cost is about a 100 times cheaper than SQL Azure for data at rest. It is very safe to assume that there is a massive price advantage for data at rest for Azure Table Storage, for any logical comparisons with different factors and features enabled that effects pricing.
 
 ### Reliability:
 
