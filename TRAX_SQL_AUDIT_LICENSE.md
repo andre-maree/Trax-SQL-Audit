@@ -1,0 +1,2 @@
+- This software, "Trax SQL Audit", is not free for commercial business use, to be deployed, or to be used to connect to any business database, without purchasing a license for "Trax SQL Audit" software from Andre Maree maree.andre@gmail.com. It is not allowed to copy the "Trax SQL Audit" dll, or the source code of "Trax SQL Audit", to use it as is, or to modify it, without purchasing a "Trax SQL Audit" license that allows this.
+- If you want to purchase Trax SQL Audit, then please contact Andre Maree at maree.andre@gmail.com for assistance around pricing and support.
