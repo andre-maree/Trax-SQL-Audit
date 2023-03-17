@@ -1,8 +1,6 @@
 This software, "Trax SQL Audit", is not free for commercial business use, to be deployed, or to be used to connect to any business database, without purchasing a license for "Trax SQL Audit" software from Andre Maree maree.andre@gmail.com. It is not allowed to copy the "Trax SQL Audit" dll, or the source code of "Trax SQL Audit", to use it as is, or to modify it, without purchasing a "Trax SQL Audit" license that allows this. Please see the included software license "TRAX_SQL_AUDIT_LICENSE.md"".
 
-A license per SQL database must be purchased at $99 per month, or for $999 for a year. Contact Andre at maree.andre@gmail.com for more info.
-
-The Trax source code repository is not publicly available.
+1 License per SQL database is needed at $99 per month. Contact Andre at maree.andre@gmail.com for more info.
 
 # Welcome to Trax SQL Audit
 
@@ -16,21 +14,27 @@ The goal of Trax is to help your business save money and benefit from modern app
 - The data is saved to table storge partitioned by month and SQL table name.
 - The table storage rowkey is set to the audit UTC date descending, for fast retrieval by date filter.
 
-### High Level Cost Benefit Analysis:
+### High Level Cost Benefit Analysis
 
-It is not straight-forward to compare Azure Table Storage to SQL Azure data at rest costs. A reasonable cost for SQL Azure can be $5 per gig per month. A reasonable cost for Azure Table Storage can be 5c per gig per month. It is not unreasonable to estimate that Azure Table Storage cost is about a 100 times cheaper than SQL Azure for data at rest. It is very safe to assume that there is a massive price advantage for data at rest for Azure Table Storage, for any logical comparisons with different factors and features enabled that effects pricing.
+#### For a solution that requires another SQL Server licence:
 
-### Reliability:
+It is not straight-forward to compare Azure Table Storage vs Azure SQL data at rest costs. A reasonable cost for SQL Azure can be $5 per gig per month. A reasonable cost for Azure Table Storage can be 5c per gig per month. It is not unreasonable to estimate that Azure Table Storage cost is about a 100 times cheaper than Azure SQL for data at rest. It is very safe to assume that there is a massive price advantage for data at rest for Azure Table Storage, for any logical comparisons with different factors and features enabled that effects pricing.
+
+#### For a solution that requires another SQL Server licence, or for when the existing SQL Server is used to store audit data:
+
+If SQL Server is the audit store, then it is recommended to export audit data to another SQl Server instance. However, id the same instance is used to store audit data, then there is only a slight data cost advantage in favour of Table Storage. The greatest benefit of Trax is it`s scalability by data partitioning, compared to a SQL index on audit data that was populated by trigger.
+
+### Reliability
 
 Trax is a Durable Function and therefor offers built in reliability, but if there ever is a problem when processing a batch, then:
 
 - the error will be logged
-- the problematic batch of audit data will not be deleted from the source SQL Server
-- the problematic batch of audit data will not be copied to table storage
+- audit data will not be deleted from the source SQL Server
+- or copied to table storage
 - Trax will continue to process new data
  
 This allows for safe problem resolution if the need ever arises.
 
-### Alerts:
+### Alerts
 
 Trax does not have any alerts at the moment. It is in the development pipeline to add alerting functionality for errors.
