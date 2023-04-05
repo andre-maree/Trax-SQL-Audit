@@ -17,7 +17,7 @@ It is not straight-forward to compare Azure Table Storage vs Azure SQL data at r
 
 #### Compared to a solution that uses the existing SQL Server to store audit data:
 
-If SQL Server is the audit store, then it is recommended to export audit data to another SQL Server instance. Even if the same SQL Sever database instance is used to store audit data, there is a significant cost advantage to Azure blob archive tier cost that Trax can use. Another great benefit of Trax is it`s scalability by data partitioning, compared to a SQL index on audit data that was populated by trigger. Placing an index on an audit table that is populated by trigger is not recommened because it slows the working of the primary table. It would be better to create a table per month, but this should not be done in the production SQL database - Trax does this by moving the data into Azure storage.
+If SQL Server is the audit store, then it is recommended to export audit data to another SQL Server instance. Even if the same SQL Sever database instance is used to store audit data, there is a significant cost advantage by using the Azure blob archive tier cost that Trax can use. Another great benefit of Trax is it`s scalability by data partitioning, compared to a SQL index on audit data that was populated by trigger. Placing an index on an audit table that is populated by trigger is not recommened because it slows the working of the primary table. It would be better to create a table per month, but this should not be done in the production SQL database - Trax does this by moving the data into Azure storage.
 
 #### Compared to solution that uses the built in SQL auditing mechanism:
 
